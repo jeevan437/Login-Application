@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    {% if user.is_authenticated %}
+    <p>hello</p>
+    <p>welcome {{ user.username }}</p>
+    <p><a href="/logout">Logout</a></p>
+    {% else %}
+    <h1 style="font-size:60px;" align="center">Welcome to Library Management</h1>
+    <p align="center"><a href="/login">Login</a></p>
+    <p align="center"><a href="/register">Register</a></p>
+    {% endif %}
+</body>
+{% endblock %}

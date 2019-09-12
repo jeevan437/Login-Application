@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+</head>
+<body>
+    <h1 style="font-size:60px;" align="center">Welcome to Library Management</h1>
+    <p align="center"> This page will create a new user.</p>
+    <div align="center">
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>
